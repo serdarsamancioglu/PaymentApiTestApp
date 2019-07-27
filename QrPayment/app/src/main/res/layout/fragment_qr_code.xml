@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+		<data>
+				<variable 
+						name="viewModel" 
+						type="com.serdar.mytestapp.qrpayment.payment.QrPaymentViewModel"/>
+		</data>
+		<android.support.constraint.ConstraintLayout
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				xmlns:app="http://schemas.android.com/apk/res-auto"
+				xmlns:tools="http://schemas.android.com/tools"
+				android:id="@+id/constraintLayout"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:paddingStart="20dp"
+				android:paddingEnd="20dp"
+				android:paddingTop="40dp"
+				android:paddingBottom="60dp"
+				android:background="@drawable/page_background"
+				tools:context=".qrpayment.payment.QrPaymentFragment">
+
+				<ImageView
+						android:id="@+id/logo"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintTop_toTopOf="parent"
+						android:src="@drawable/logo"/>
+
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/qr_payment"
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintEnd_toEndOf="parent"
+						app:layout_constraintTop_toBottomOf="@+id/logo"
+						app:layout_constraintBottom_toTopOf="@id/inputQr"
+						android:textSize="24sp"
+						android:textStyle="bold"
+						android:textColor="@android:color/white"/>
+
+				<EditText
+						android:id="@+id/inputQr"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						app:layout_constraintTop_toTopOf="parent"
+						app:layout_constraintBottom_toBottomOf="parent"
+						android:hint="@string/enter_qr_code"
+						android:gravity="center"
+						android:inputType="number"
+						android:textColor="@android:color/white"
+						android:textColorHint="@android:color/secondary_text_dark"
+						android:text="@={viewModel.qrCode}"
+						android:visibility="gone"/>
+
+				<EditText
+						android:id="@+id/inputAmount"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:hint="@string/enter_amount"
+						android:gravity="center"
+						android:inputType="numberDecimal"
+						android:text="@={viewModel.amount}"
+						android:textColor="@android:color/white"
+						android:textColorHint="@android:color/secondary_text_dark"
+						app:layout_constraintTop_toBottomOf="@+id/inputQr"/>
+
+
+				<Button
+					android:id="@+id/btnSubmit"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:onClick="@{() -> viewModel.validate()}"
+					app:layout_constraintBottom_toBottomOf="parent"
+					android:text="@string/make_payment"
+					android:background="@drawable/bg_standart_button"
+					android:textColor="@android:color/white"
+					/>
+
+		</android.support.constraint.ConstraintLayout>
+</layout>

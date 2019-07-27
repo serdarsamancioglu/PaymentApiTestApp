@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Qr Sale</string>
+    <string name="enter_qr_code">ENTER QR CODE</string>
+    <string name="enter_amount">ENTER AMOUNT</string>
+    <string name="qr_payment">TOKEN QR PAYMENT</string>
+    <string name="make_payment">MAKE PAYMENT</string>
+    <string name="success">Payment Successful</string>
+    <string name="new_payment">New Payment</string>
+    <string name="pos_id">Pos ID: </string>
+    <string name="invalid_amount">Invalid Amount</string>
+</resources>

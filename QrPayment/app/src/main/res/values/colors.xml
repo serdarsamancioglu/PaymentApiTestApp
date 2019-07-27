@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="button_end">#f9423a</color>
+    <color name="button_start">#e4002b</color>
+    <color name="bg_progress">#D6000000</color>
+</resources>
